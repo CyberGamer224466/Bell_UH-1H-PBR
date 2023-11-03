@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+  <sim>
+    <model>
+      <livery>
+        <name type="string">US Army 174 AHC</name>
+        <texture>Liveries/USArmy174AHC.png</texture>
+       
+      </livery>      
+    </model>
+	<rendering>
+    <refl_correction type="string">-0.42</refl_correction>
+    </rendering>
+  </sim>
+</PropertyList>

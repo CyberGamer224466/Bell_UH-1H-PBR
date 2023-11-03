@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>key.ac</path>
+
+  <animation>
+    <type>material</type>
+    <object-name>base</object-name>
+    <object-name>key</object-name>
+    <emission>
+      <red>  0.0</red>
+      <green>0.02</green>
+      <blue> 0.0</blue>
+	   <factor-prop>controls/lighting/dash-dim</factor-prop>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>knob</type>
+    <object-name>key</object-name>
+    <property>controls/engines/engine/masterkey</property>
+    <center>
+      <x-m> 0 </x-m>
+      <y-m> 0 </y-m>
+      <z-m> 0 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+    <factor>-35</factor>
+    <action>
+      <button>0</button>
+      <repeatable>true</repeatable>
+ 		 
+	  <binding>
+        <command>property-toggle</command>
+        <property>controls/engines/engine/masterkey</property>
+      </binding>
+    </action>
+  </animation>
+
+</PropertyList>

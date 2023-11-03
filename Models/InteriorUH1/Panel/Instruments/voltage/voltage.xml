@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>voltage.ac</path>
+	
+	<!--effect>
+		<inherits-from>Effects/model-transparent</inherits-from>
+		<condition>
+			<property>/sim/rendering/rembrandt/enabled</property>
+		</condition>
+		<object-name>face</object-name> 
+		<object-name>needle</object-name> 
+	</effect-->
+
+  <animation>
+    <type>material</type>
+    <object-name>face</object-name>
+    <object-name>needle</object-name>
+    <emission>
+      <factor-prop>/systems/electrical/outputs/instrument-lights</factor-prop>
+            <red>0.0175</red>
+            <green>0.0175</green>
+            <blue>0.0175</blue>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>needle</object-name>
+    <property>/systems/electrical/volts</property><!-- 10V = 90deg -->
+    <interpolation>
+      <entry><ind>   0 </ind><dep>  -67.5 </dep></entry>
+      <entry><ind>  7.5 </ind><dep>  0 </dep></entry>
+      <entry><ind>  17.5 </ind><dep>  90 </dep></entry>
+      <entry><ind> 27.5 </ind><dep>  180 </dep></entry>
+      <entry><ind> 37.5 </ind><dep>  270 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+	<animation>
+		<type>range</type>
+		<min-m>0</min-m>
+		<max-m>5</max-m>
+	</animation>
+
+
+	
+	
+</PropertyList>
+

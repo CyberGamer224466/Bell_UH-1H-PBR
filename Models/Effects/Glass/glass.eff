@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <name>glass</name>
+  <inherits-from>Effects/model-pbr-transparent</inherits-from>
+  <parameters>
+
+    <metallic-factor type="float">0.5</metallic-factor>
+		<roughness-factor type="float">0.01</roughness-factor>
+
+  </parameters>
+
+</PropertyList>

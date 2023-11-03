@@ -1,0 +1,186 @@
+<?xml version="1.0"?>
+<!-- $Id$ -->
+<!--
+  MD500 multiplayer passenger view.
+
+  Copyright (C) 2009  Anders Gidenstam  (anders(at)gidenstam.org)
+  This file is licensed under the GPL license version 2 or later.
+-->
+<!--
+  Usage: fgfs - -prop:/sim/remote/pilot-callsign="remote pilot callsign" - -aircraft=Fi-156-passenger
+-->
+<PropertyList>
+
+<sim include="Systems/viewscrew.xml">
+
+  <description>UH-1H Multiplayer crew</description>
+  <author>Anders Gidenstam</author>
+  <status>alpha</status>
+  <aircraft-version>$Id$</aircraft-version>
+  
+  <flight-model>null</flight-model>
+
+  <presets>
+   <onground type="bool">false</onground>
+   <altitude-agl-ft type="double">30.0</altitude-agl-ft>
+  </presets>
+
+  <!-- 3d model -->
+  <model>
+   <path>Aircraft/Bell_UH-1H/Models/UH1-H-crew.xml</path>
+  </model>
+<rendering>
+    <refl_correction type="string">-0.42</refl_correction>
+    </rendering>
+
+ 	<sound>
+			<path>Aircraft/Bell_UH-1H/Sounds/sound.xml</path>
+		</sound>
+  <!-- Aircraft specific help. -->
+  <!-- help include="help.xml"/ -->
+
+    <systems>
+      <electrical>
+        <path>Aircraft/Bell_UH-1H/Systems/fgukelectrical.xml</path>
+      </electrical>
+	   <autopilot n="101">
+                <path>Aircraft/Bell_UH-1H/Systems/glass-rain.xml</path>
+            </autopilot>
+			
+			<autopilot n="102">
+                <path>Aircraft/Bell_UH-1H/Systems/sound-rules.xml</path>
+            </autopilot>
+<!--<autopilot>
+        <path>Aircraft/Bell_UH-1H/Systems/autopilot.xml</path>
+      </autopilot>-->
+    </systems> 
+  
+  		<multiplay>
+			<generic>
+			    <!-- Nav lights on -->
+      <int n="0" alias="/controls/switches/nav-lights-switch" />
+      <!-- Beacon on -->
+      <int n="1" alias="/controls/switches/beacon-switch" />
+      <!-- Landing lights on -->
+      <int n="2" alias="/controls/switches/landing-lights-switch" />
+	    <!-- Taxi light on -->
+      <int n="3" alias="/controls/switches/strobe-switch" />
+	  <int n="6" alias="/gear/gear/ground-is-solid"/><!-- rotor particles -->
+      <!-- Crashed -->
+      <int n="7" alias="/sim/crashed" />
+		 <!-- search light on -->
+      <int n="8" alias="/controls/switches/search-lights-switch" />	
+		
+	            <float n="0" alias="/sim/model/bo105/doors/door[0]/position-norm"/>
+				<float n="1" alias="/sim/model/bo105/doors/door[1]/position-norm"/>
+				<float n="2" alias="/sim/model/bo105/doors/door[2]/position-norm"/>
+				<float n="3" alias="/sim/model/bo105/doors/door[3]/position-norm"/>
+				<!--<float n="3" alias="/sim/model/bo105/doors/door[4]/position-norm"/>-->
+				<float n="6" alias="/orientation/pitch-deg"/>	<!-- rotor particles -->
+				<float n="7" alias="/position/gear-agl-m"/>	<!-- rotor particles -->
+				<float n="8" alias="/orientation/roll-deg"/><!-- rotor particles -->
+				<float n="9" alias="/rotors/main/torque"/>	<!-- rotor particles -->
+				<float n="10" alias="/sim/model/turret-positions/turretx"/><!--Searchlight over MP -->
+				<float n="11" alias="/sim/model/turret-positions/turretz"/><!--searchlight over MP -->
+				<float n="12" alias="/sim/model/rescue"/><!--winchman over MP -->
+				<float n="13" alias="/sim/model/rescue-lift"/><!--winchman over MP -->
+		
+                <string alias="/sim/weight[5]/selected" n="1"/> <!-- Payload over multiplayer -->
+				
+				
+			</generic>
+		</multiplay>
+  
+  <rendering>
+    <refl_correction type="string">-0.42</refl_correction>
+    </rendering>
+
+
+  <menubar>
+   <default>
+    <menu n="100">
+     <label>UH-1H</label>
+     <item>
+      <label>Select MP-pilot</label>
+      <binding>
+       <command>nasal</command>
+       <script>
+        dual_control_tools.
+          copilot_dialog.show(aircraft_dual_control.pilot_type);
+       </script>
+      </binding>
+     </item>
+    </menu>
+   </default>
+  </menubar>
+
+ </sim>
+ 
+ <instrumentation>
+		<gsdi>
+			<serviceable type="bool">true</serviceable>
+		</gsdi>
+		<cdu>  <serviceable type="bool">true</serviceable>
+<enabled type="bool">true</enabled></cdu>
+		<hsi>
+			<serviceable type="bool" archive="y">true</serviceable>
+		</hsi>
+	</instrumentation>
+
+	<nasal>
+	<VHF22>
+<file>Aircraft/Generic/DualControl/Instruments/VHF-22/ctl22.nas</file>
+</VHF22>
+<VIR32>
+<file>Aircraft/Generic/DualControl/Instruments/VIR-32/ctl32.nas</file>
+</VIR32>
+<ADF462>
+<file>Aircraft/Generic/DualControl/Instruments/ADF-462/ctl62.nas</file>
+</ADF462>
+<chronograph>
+<file>Aircraft/Bell_UH-1H/Nasal/chronograph.nas</file>
+</chronograph>
+	
+	<bo105>
+			 <file>Aircraft/Bell_UH-1H/Nasal/bo105.nas</file>
+			<file>Aircraft/Bell_UH-1H/Nasal/engines.nas</file>
+			 <file>Aircraft/Bell_UH-1H/Nasal/liveries.nas</file>
+			 
+			  <file>Aircraft/Bell_UH-1H/Nasal/woolthread.nas</file>
+			   
+		</bo105>
+		
+		
+		<guns>
+<file>Aircraft/Bell_UH-1H/Nasal/guns.nas</file>
+</guns>
+	
+	<doors>
+<file>Aircraft/Bell_UH-1H/Nasal/doors.nas</file> <!-- only used to move the gunsight -->
+</doors>
+		
+		<lights>
+      <file>Aircraft/Bell_UH-1H/Nasal/Lights.nas</file>
+    </lights>
+	
+        
+   
+
+	<sound-helper>
+      <file>Aircraft/Bell_UH-1H/Nasal/sound-helper.nas</file>
+    </sound-helper> 
+	
+	 <dual_control_tools>
+   <file>Aircraft/Generic/DualControl/dual-control-tools.nas</file>
+  </dual_control_tools>
+  <aircraft_dual_control>
+   <file>Aircraft/Bell_UH-1H/Nasal/uh1-dual-control.nas</file>
+  </aircraft_dual_control>
+  <dual_control>
+   <file>Aircraft/Generic/DualControl/copilot-dual-control.nas</file>
+  </dual_control>
+	
+	</nasal>
+
+
+</PropertyList>

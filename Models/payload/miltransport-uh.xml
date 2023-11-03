@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+<model>
+<name>pilot1</name>
+<path>Aircraft/Bell_UH-1H/Models/Divers/Pilot/Helipilot4/pilot.xml</path>
+<offsets>
+<x-m> -6.83 </x-m>
+<y-m>  0.48 </y-m>
+<z-m> -0.6 </z-m>
+</offsets>
+</model>
+
+<model>
+<name>pilot2</name>
+<path>Aircraft/Bell_UH-1H/Models/Divers/Pilot/Helipilot4/pilot.xml</path>
+<offsets>
+<x-m> -6.83 </x-m>
+<y-m> -0.57 </y-m>
+<z-m> -0.6 </z-m>
+</offsets>
+</model>
+
+
+<!-- benches -->
+<model>
+<path>Aircraft/Bell_UH-1H/Models/InteriorUH1/benches.xml</path>
+<offsets>
+<x-m>0</x-m>
+<y-m>0</y-m>
+<z-m>0</z-m>
+</offsets>
+</model>
+
+
+<!-- 50-cal -->
+<model>
+<path>Aircraft/Bell_UH-1H/Models/payload/doorguns/50cal.xml</path>
+<offsets>
+<x-m>0</x-m>
+<y-m>-0.0</y-m>
+<z-m>-0.28</z-m>
+<pitch-deg>5</pitch-deg>
+</offsets>
+</model>
+
+<!-- M60-cal -->
+<model>
+<path>Aircraft/Bell_UH-1H/Models/payload/doorguns/m60.xml</path>
+<offsets>
+<x-m>0</x-m>
+<y-m>-0.11</y-m>
+<z-m>-0.32</z-m>
+<pitch-deg>5</pitch-deg>
+</offsets>
+</model>
+	
+
+</PropertyList>

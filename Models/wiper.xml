@@ -1,0 +1,50 @@
+<?xml version="1.0" ?>
+
+<PropertyList>
+
+  <path>wiper.ac</path>
+
+<!-- Wiper Copilot -->
+  <animation>
+    <type>rotate</type>
+    <object-name>wiper_cplt</object-name>
+    <property>/controls/wiper/poscp</property>
+<!--<condition>
+      <property>systems/electrical/outputs/wiper_cplt</property>
+    </condition>-->
+    <center>
+      <x-m> 0.000</x-m>
+      <y-m>-0.642</y-m>
+      <z-m> 0.000</z-m>
+    </center>
+    <axis>
+      <x>-1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+<!-- Wiper Pilot -->
+  <animation>
+    <type>rotate</type>
+    <object-name>wiper_plt</object-name>
+  <property>controls/wiper/posp</property>
+<condition>
+<greater-than>
+      <property>controls/wiper/speed</property>
+	  <value>-1</value>
+	  </greater-than>
+    </condition>
+    <center>
+      <x-m> 0.000</x-m>
+      <y-m> 0.633</y-m>
+      <z-m> 0.000</z-m>
+    </center>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+</PropertyList>

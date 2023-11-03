@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+<path>interior.ac</path>
+
+<animation>
+  <type>range</type>
+  <min-m>0</min-m>
+  <max-m>500</max-m>
+ </animation>
+
+<animation>
+<!-- Objets opaques -->
+<object-name>interieur</object-name>
+<object-name>floor1</object-name>
+<object-name>floor2</object-name>
+<object-name>frontdoorlint</object-name>
+<object-name>frontdoorrint</object-name>
+<object-name>sidedoorintr</object-name>
+<object-name>sidedoorintl</object-name>
+<object-name>slidedoorintr</object-name>
+<object-name>slidedoorintl</object-name>
+<object-name>seat</object-name>
+<object-name>seat_padding</object-name>
+<object-name>crewseat1</object-name>
+<object-name>crewseat2</object-name>
+<object-name>wall2</object-name>
+
+
+</animation>
+
+<effect>
+<inherits-from>bumpspec-interior-floor</inherits-from>
+<object-name>floor1</object-name>
+<object-name>floor2</object-name>
+<object-name>wall2</object-name>
+
+</effect>
+
+<effect>
+<inherits-from>bumpspec-interior</inherits-from>
+<object-name>interieur</object-name>
+<object-name>frontdoorlint</object-name>
+<object-name>frontdoorrint</object-name>
+<object-name>sidedoorintr</object-name>
+<object-name>sidedoorintl</object-name>
+<object-name>slidedoorintr</object-name>
+<object-name>slidedoorintl</object-name>
+
+</effect>
+
+<effect>
+<inherits-from>bumpspec-interior-seats</inherits-from>
+<object-name>seat_padding</object-name>
+
+</effect>
+
+
+
+<animation>
+<type>noshadow</type>
+<object-name>vitresint</object-name>
+<object-name>frontdoorglasleftint</object-name>
+<object-name>frontdoorglasrighint</object-name>
+<object-name>sidedoorglasleftint</object-name>
+<object-name>sidedoorglasrightint</object-name>
+<object-name>slidedoorglasleftint</object-name>
+<object-name>slidedoorglasrighint</object-name>
+</animation>
+
+ <effect>
+        <inherits-from>Effects/glass</inherits-from>
+       <object-name>vitresint</object-name>
+<object-name>frontdoorglasleftint</object-name>
+<object-name>frontdoorglasrighint</object-name>
+<object-name>sidedoorglasleftint</object-name>
+<object-name>sidedoorglasrightint</object-name>
+<object-name>slidedoorglasleftint</object-name>
+<object-name>slidedoorglasrighint</object-name>
+    </effect>
+
+
+<!-- gunsight -->
+<model>
+<name>gunsight</name>
+<path>Aircraft/Bell_UH-1H/Models/InteriorUH1/Panel/gunsight.xml</path>
+<offsets>
+<x-m> -6.975 </x-m>
+<y-m>  0.45 </y-m>
+<z-m> 0.03 </z-m>
+</offsets>
+</model>
+
+
+	<animation>
+		<type>select</type>
+		<object-name>gunsight</object-name>
+		
+			<condition>
+		 <equals>
+    <property>sim/multiplay/generic/string[1]</property>
+    <value>guns</value>
+   </equals>
+   </condition>
+	</animation>
+
+
+<!-- Planche de bord -->
+<model>
+<path>Aircraft/Bell_UH-1H/Models/InteriorUH1/Panel/panel.xml</path>
+<offsets>
+<x-m> -6.999 </x-m>
+<y-m>  0.000 </y-m>
+<z-m> -0.785 </z-m>
+</offsets>
+</model>
+
+<!--OVERHEADPANEL-->
+<model>
+<path>Aircraft/Bell_UH-1H/Models/InteriorUH1/Panel/overheadpanel.xml</path>
+<offsets>
+<x-m> -6.7 </x-m>
+<y-m>  0.00 </y-m>
+<z-m>  0.12 </z-m>
+<pitch-deg>5</pitch-deg>
+<roll-deg>180</roll-deg>
+</offsets>
+</model>
+
+</PropertyList>

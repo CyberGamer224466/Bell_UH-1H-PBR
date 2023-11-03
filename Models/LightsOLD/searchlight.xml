@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <model>
+    <name>SearchLightFlash</name>
+    <path>Aircraft/Bell-UH-1H/Models/lights/Flares/SearchLight-flash.xml</path>
+  </model>
+
+  <model>
+    <name>SearchLightRemb</name>
+    <path>Aircraft/Bell-UH-1H/Models/lights/Rembrandt/SearchLight-remb.xml</path>
+  </model>
+  
+  <model>
+    <name>SearchLightCone</name>
+    <path>Aircraft/Bell-UH-1H/Models/lights/LightCone/SearchLight-cone.xml</path>
+  </model> <!-- uncomment for fake non-rembrandt cones -->
+
+  <animation>
+    <type>select</type>
+    <object-name>SearchLightFlash</object-name>
+    <object-name>SearchLightRemb</object-name>
+    <object-name>SearchLightCone</object-name> <!-- uncomment for fake non-rembrandt cones -->
+    <condition>
+      <and>
+       <!-- <property>lightpack/landing-lights-intensity</property> -->
+        <not><property>sim/crashed</property></not>
+      </and>
+    </condition>
+  </animation>
+
+</PropertyList>

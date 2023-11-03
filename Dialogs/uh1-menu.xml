@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <default>
+    <menu n="10">
+      <label>UH-1H</label>
+      <enabled type="bool">true</enabled>
+     
+	 <item n="1">   
+        <label>Select Livery</label>
+        <binding>
+          <command>nasal</command>
+          <script>aircraft.livery.dialog.toggle()</script>
+        </binding>
+      </item>
+	  
+	  
+	  <item n="2">
+        <label>Reload weapons</label>
+        <binding>
+          <command>nasal</command>
+          <script>guns.reload_Cannon()</script>
+        </binding>
+      </item>
+	 
+    </menu>
+  </default>
+
+</PropertyList>

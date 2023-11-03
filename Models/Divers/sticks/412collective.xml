@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>412-collective.ac</path>
+  
+  
+   <model>
+  <name>floatswitch</name>
+  <path>Aircraft/UH-1/Models/Divers/Floats/Float-switch/float-switch.xml</path>
+  <offsets>
+  <x-m>-0.44408</x-m>
+  <y-m>0.03589</y-m>
+  <z-m>0.26240</z-m>
+  <pitch-deg>-65.1</pitch-deg>
+  </offsets>
+  </model> 
+  
+   <model>
+  <name>floattoggle</name>
+  <path>Aircraft/UH-1/Models/Interior/Panel/Instruments/Switch/float.xml</path>
+  <offsets>
+  <x-m>-0.43</x-m>
+  <y-m>0.03589</y-m>
+  <z-m>0.253</z-m>
+  <pitch-deg>-65.1</pitch-deg>
+  </offsets>
+  </model> 
+ 
+  
+  <model>
+  <name>landingswitch</name>
+  <path>Aircraft/UH-1/Models/Interior/Panel/Instruments/switches/landing-lights.xml</path>
+  <offsets>
+  <x-m>-0.466</x-m>
+  <y-m>-0.032</y-m>
+  <z-m>0.27130</z-m>
+  <pitch-deg>-65.1</pitch-deg>
+  </offsets>
+  </model>
+
+<model>
+  <name>searchswitch</name>
+  <path>Aircraft/UH-1/Models/Interior/Panel/Instruments/switches/landing-lights.xml</path>
+  <offsets>
+  <x-m>-0.466</x-m>
+  <y-m>0.007</y-m>
+  <z-m>0.27150</z-m>
+  <pitch-deg>-65.1</pitch-deg>
+  </offsets>
+  </model>  
+
+	
+  <!--<animation>
+    <object-name>mesh77</object-name>
+    <object-name>mesh79.003</object-name>
+    <object-name>starter</object-name>
+    <object-name>collts</object-name>
+    <object-name>collgov</object-name>
+  </animation>
+-->
+  <animation>
+    <name>CollectiveComplet</name>
+	<object-name>mesh39</object-name>
+	<object-name>mesh39.002</object-name>
+	<object-name>mesh39.001</object-name>
+	<object-name>mesh39.003</object-name>
+	<object-name>mesh39.004</object-name>
+	<object-name>mesh39.005</object-name>
+	<object-name>mesh40</object-name>
+	<object-name>mesh40.001</object-name>
+	<object-name>mesh40.002</object-name>
+	<object-name>mesh40.003</object-name>
+	<object-name>mesh40.004</object-name>
+	<object-name>mesh40.005</object-name>
+	<object-name>mesh41</object-name>
+	<object-name>mesh41.001</object-name>
+	<object-name>mesh41.002</object-name>
+	<object-name>mesh41.003</object-name>
+	<object-name>mesh41.004</object-name>
+	<object-name>mesh41.005</object-name>
+	<object-name>mesh44</object-name>
+	<object-name>mesh45</object-name>
+	<object-name>mesh45.001</object-name>
+	<object-name>mesh46</object-name>
+	<object-name>mesh47</object-name>
+	<object-name>mesh48</object-name>
+	   
+	<object-name>mesh49</object-name>
+	<object-name>mesh49.001</object-name>
+	<object-name>mesh49.002</object-name>
+	<object-name>mesh49.003</object-name>
+	<object-name>mesh49.004</object-name>
+	<object-name>mesh49.005</object-name>
+	<object-name>mesh49.006</object-name>
+	<object-name>mesh49.007</object-name>
+	<object-name>mesh50</object-name>
+	<object-name>mesh50.001</object-name>
+	<object-name>mesh50.002</object-name>
+	<object-name>mesh50.003</object-name>
+	<object-name>mesh50.004</object-name>
+	<object-name>mesh50.005</object-name>
+	<object-name>mesh50.006</object-name>
+	<object-name>mesh50.007</object-name>
+	 <object-name>mesh52</object-name>
+	<object-name>mesh55</object-name>
+	<object-name>mesh56</object-name>
+	<object-name>mesh60</object-name>
+	<object-name>mesh61</object-name>
+	<object-name>mesh62</object-name>
+	<object-name>mesh63</object-name>
+	<object-name>mesh64</object-name>
+	<object-name>mesh65</object-name>
+	<object-name>mesh66</object-name>
+	<object-name>mesh67</object-name>
+	<object-name>mesh68</object-name>
+	<object-name>mesh69</object-name>
+	<object-name>mesh70</object-name>
+	<object-name>mesh70.001</object-name>
+	<object-name>mesh71</object-name>
+	<object-name>mesh72</object-name>
+	<object-name>mesh73</object-name>
+	<object-name>mesh74</object-name>
+	<object-name>mesh75</object-name>
+	<object-name>mesh76</object-name>
+   <object-name>mesh77</object-name>
+   <object-name>mesh78</object-name>
+	<object-name>mesh79</object-name>
+	<object-name>mesh79.001</object-name>
+	<object-name>mesh79.002</object-name>
+	 <object-name>mesh79.003</object-name>
+	<object-name>mesh80</object-name>
+	<object-name>mesh80.001</object-name>
+	<object-name>mesh81</object-name>
+	<object-name>mesh81.001</object-name>
+	<object-name>mesh81.003</object-name>
+	<object-name>mesh81.002</object-name>
+	<object-name>mesh82</object-name>
+	<object-name>mesh82.001</object-name>
+	<object-name>mesh83</object-name>
+	<object-name>mesh83.001</object-name>
+	<object-name>mesh84.001</object-name>
+	<object-name>mesh84</object-name>
+	<object-name>mesh85</object-name>
+	<object-name>mesh85.001</object-name>
+	<object-name>mesh86</object-name>
+	<object-name>mesh86.001</object-name>
+	<object-name>floatswitch</object-name>
+	<object-name>landingswitch</object-name>
+	<object-name>searchswitch</object-name>
+	<object-name>floattoggle</object-name>
+  </animation>
+
+ 
+  <animation>
+    <type>rotate</type>
+    <object-name>CollectiveComplet</object-name>
+    <property>controls/engines/engine[0]/throttle</property>
+    <factor> -8</factor>
+    <offsets>
+      <x-m>  0.03 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> 0.05</z-m>
+    </offsets>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+  
+  <!-- restrict switches depending on configuratione -->
+<animation>
+        <type>select</type>
+     <object-name>floatswitch</object-name>
+	<object-name>floattoggle</object-name>
+  
+        <condition>
+		<not>
+			<or>
+		      
+				 <equals>
+    <property>sim/multiplay/generic/string[1]</property>
+    <value>none</value>
+	</equals>
+	
+	
+	<and>
+	
+	<equals>
+	<property>sim/multiplay/generic/string[1]</property>
+    <value>sprayer</value>
+	</equals>
+	
+	</and>
+	
+	<and>
+	
+	<equals>
+	<property>sim/multiplay/generic/string[1]</property>
+    <value>Military_Transport</value>
+	</equals>
+	
+	</and>
+	
+	<and>
+	
+	<equals>
+	<property>sim/multiplay/generic/string[1]</property>
+    <value>guns</value>
+	</equals>
+	
+	</and>
+
+	
+	
+	
+	</or>
+		</not>			
+			</condition>
+    </animation>
+	
+ <animation>
+        <type>select</type>
+      <object-name>searchswitch</object-name>
+  
+        <condition>
+		<not>
+			<or>
+		      
+				 <equals>
+    <property>sim/multiplay/generic/string[1]</property>
+    <value>none</value>
+	</equals>
+	
+	
+	<and>
+	
+	<equals>
+	<property>sim/multiplay/generic/string[1]</property>
+    <value>sprayer</value>
+	</equals>
+	
+	</and>
+	
+	<and>
+	
+	<equals>
+	<property>sim/multiplay/generic/string[1]</property>
+    <value>Military_Transport</value>
+	</equals>
+	
+	</and>
+	
+	<and>
+	
+	<equals>
+	<property>sim/multiplay/generic/string[1]</property>
+    <value>guns</value>
+	</equals>
+	
+	</and>
+<and>
+	
+	<equals>
+	<property>sim/multiplay/generic/string[1]</property>
+    <value>luggage</value>
+	</equals>
+	
+	</and>
+	
+	
+	</or>
+		</not>			
+			</condition>
+    </animation> 
+
+</PropertyList>
+

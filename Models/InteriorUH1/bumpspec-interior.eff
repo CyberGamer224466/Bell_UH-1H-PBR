@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PropertyList>
+  <name>bumpspec-interior</name>
+  <inherits-from>Effects/model-pbr</inherits-from>
+  <parameters>
+  
+    <metallic-factor type="float">0.2</metallic-factor>
+    <roughness-factor type="float">0.8</roughness-factor>
+
+  </parameters>
+</PropertyList>

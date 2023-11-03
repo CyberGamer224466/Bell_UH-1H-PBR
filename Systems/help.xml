@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <title>Bell UH 1H "Huey"</title>
+  <line>______________________________________________</line>
+  <line>To Silence the Low Rotor Alarm, use the switch on the Engine panel</line>
+  <line>To open and close the doors just click on it!</line>
+ 
+		
+    
+  <key>
+    <name>Delete</name>
+    <desc>Fire the miniguns</desc>
+  </key>
+  
+  <key>
+    <name>[</name>
+    <desc>port side Fire rockets</desc>
+  </key>
+  <key>
+    <name>]</name>
+    <desc>starboard side Fire rockets</desc>
+  </key>
+  <key>
+    <name>N</name>
+    <desc>Toggle rotor brake</desc>
+  </key>
+  <key>
+    <name>n</name>
+    <desc>Apply rotor brake</desc>
+  </key>
+  <key>
+    <name>}</name>
+    <desc>AutoStart Engines. </desc>
+  </key>
+  <key>
+    <name>{</name>
+    <desc>AutoShutdown Engines</desc>
+  </key>
+  
+  
+	     
+   <key>
+        <name>w</name>
+        <desc>Rotate Searchlight Up</desc>
+      </key>
+      <key>
+        <name>a</name>
+        <desc>Rotate Searchlight Left</desc>
+      </key>
+      <key>
+        <name>s</name>
+        <desc>Rotate Searchlight Down</desc>
+      </key>
+      <key>
+        <name>d</name>
+        <desc>Rotate Searchlight Right</desc>
+      </key>    
+
+<line>WEAPONS</line>
+<line>The Miniguns carry 1000 rounds of ammo each.</line>
+<line>Each rocket pod carries 7 rockets</line>
+<line>Weapons can be reloaded by using the Huey Configuration menu while on the ground.</line>	  
+ <line></line>	 
+<line>MANUAL START</line>	 
+ <line>PROCEEDURES THAT ARE NOT CURRENTLY IMPLEMENTED HAVE BEEN OMITTED </line> 
+ <line>MASTER KEY - ON ( Located, RHS Main  panel, below clock )</line> 
+ <line>PITOT HEAT - OFF ( overhead panel )</line> 
+<line>EXTERNAL LIGHTS + ANTI-COLLISION LIGHTS - ON ( Overhead Panel ) </line>
+<line>POSITIONLIGHTS - AS REQUIRED ( Overhead Panel )</line>  
+<line>INVERTER - OFF (Overhead Panel )</line>
+<line>DC POWER- MAIN GEN ON (FLIP COVER) ( overhead panel )</line> 
+<line>VM - ESS-BUS  ( overhead Panel ) </line>
+<line>NON-ESS BUS - NORMAL ON ( overhead panel )</line>
+<line>STARTER GENERATOR - ON  (overhead panel )</line>
+<line>BATTERY - ON (overhead panel )</line>
+<line>LOW RPM SWITCH - OFF ( Centre console )</line>
+<line>SYSTEM INSTRUMENTS- CHECK</line> 
+<line>DE-ICE SWITCH - OFF ( centre console )</line>
+<line>MAIN FUEL SWITCH - ON (centre console) </line>
+<line>HYD CONT - ON (centreconsole ) </line>
+<line>CHECK FLIGHT CONTROL RESPONSE TO CYCLIC/COLLECTIVE/RUDDER INPUT </line>
+<line>SET ALTIMETER TO AIRFIELD ELEVATION (QNH SETTING)</line>
+<line>SET THROTTLE TO IDLE-START POSITION - 15%( Hold Middle mouse button and move mouse up/down while in select mode )</line>
+<line>LOWER COLLECTIVE, THEN PRESS STARTER SWITCH ( on collective)</line>
+<line> WAIT UNTIL N1 RPM REACHES 15 %. AT 15 % N1 RPM, THROTTLE UP TO IDLE-STOP (START) POSITION - 63%.</line> 
+<line>WAIT UNTIL N1 RPM REACHES 40 %. AT 40 % N1 RPM, RELEASE START SWITCH (click the starter switch aain to release it ). </line>
+<line>WAIT UNTIL N1 RPM REACHES 63%. AT 63 % N1 RPM, SLOWLYTHROTTLE TO FULLY OPEN. </line>
+<line>SET INVERTER - MAIN ON + STARTER GEN - STBY GEN ( overhead panel ) </line>
+<line>VERIFY CORRECT ENGINE OPERATION (IN THE GREEN) </line> 
+<line>PITOT HEAT - AS REQUIRED (overhead panel) </line>
+</PropertyList>

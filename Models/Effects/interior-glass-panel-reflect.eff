@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PropertyList>
+	<name>interior-glass-panel-reflect</name>
+	<inherits-from>/Effects/model-pbr-transparent</inherits-from>
+    <parameters>
+
+        <metallic-factor type="float">0.5</metallic-factor>
+		<roughness-factor type="float">0.01</roughness-factor>
+
+    </parameters>
+</PropertyList>

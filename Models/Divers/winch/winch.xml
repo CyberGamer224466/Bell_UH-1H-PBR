@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>winch.ac</path>
+
+   <model>
+<path>Aircraft/Bell_UH-1H/Models/Divers/Rescue/Rescue-Op.xml</path>
+<offsets>
+<x-m>-0.4</x-m>
+<y-m>1.4 </y-m>
+<z-m>-4.5</z-m>
+<heading-deg>0</heading-deg>
+</offsets>
+</model> 
+ 
+
+</PropertyList>

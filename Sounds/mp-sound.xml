@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <fx>
+  	<starter>
+			<name>starter0_start</name>
+			<mode>once</mode>
+			<path>Aircraft/Bell_UH-1H/Sounds/fguk/startup_exterior.wav</path>
+			<condition>
+				<property>engines/engine[0]/running</property>
+			</condition>
+			<volume>
+				<factor>0.7</factor>
+			</volume>
+			<volume>
+				<property>/sound/view-level-outside</property>
+			</volume>
+		</starter>
+		
+		 <rotor>
+            <name>rotor</name>
+            <mode>looped</mode>
+            <path>Aircraft/Bell_UH-1H/Sounds/engine1.wav</path>
+            <condition>
+                <and>
+                    <greater-than>
+                        <property>rotors/main/rpm</property>
+                        <value>50</value>
+                    </greater-than>
+                    <not>
+                        <property>sim/crashed</property>
+                    </not>
+				<not>
+					<property>sim/current-view/internal</property>
+				</not>
+                </and>
+            </condition>
+            <volume>
+       		 <factor>0.5</factor>
+            </volume>
+            <pitch>
+                <property>rotors/main/rpm</property>
+                <factor>0.003125</factor>
+                <offset>-0.0</offset>
+                <max>2.5</max>
+            </pitch>
+            <position>
+                <x> -4.9 </x>
+                <y> 0 </y>
+                <z> 1.5 </z>
+            </position>
+            <reference-dist>500</reference-dist>
+            <max-dist>5000</max-dist>
+        </rotor>
+
+        <rotor>
+            <name>tail_rotor</name>
+            <mode>looped</mode>
+            <path>Aircraft/Bell_UH-1H/Sounds/engine2.wav</path>
+            <condition>
+                <and>
+                    <greater-than>
+                        <property>rotors/main/rpm</property>
+                        <value>50</value>
+                    </greater-than>
+                    <not>
+                        <property>sim/crashed</property>
+                    </not>
+			<not>
+			<property>sim/current-view/internal</property>
+			</not>
+                </and>
+            </condition>
+            <volume>
+                <factor>0.8</factor>
+            </volume>
+            <pitch>
+                <property>rotors/tail/rpm</property>
+                <factor>0.0006</factor>
+                <offset>-0.0</offset>
+                <max>2.5</max>
+            </pitch>
+            <position>
+                <x> -2 </x>
+                <y> -0.4 </y>
+                <z> 1.3 </z>
+            </position>
+            <orientation>
+                <x> 1 </x>
+                <y> . </y>
+                <z> 0 </z>
+                <inner-angle>110</inner-angle>
+                <outer-angle>220</outer-angle>
+                <outer-gain>0.1</outer-gain>
+            </orientation>
+            <reference-dist>500</reference-dist>
+            <max-dist>5000</max-dist>
+        </rotor>
+
+        <engine>
+            <name>engine</name>
+            <mode>looped</mode>
+            <path>Aircraft/Bell_UH-1H/Sounds/jet1.wav</path>
+            <condition>
+                <and>
+                    <greater-than>
+                        <property>rotors/main/rpm</property>
+                        <value>50</value>
+                    </greater-than>
+                    <greater-than>
+                        <property>/controls/engines/engine[0]/power</property>
+                        <value>0.13</value>
+                    </greater-than>
+                    <not>
+                        <property>sim/crashed</property>
+                    </not>
+		    <not>
+			<property>sim/current-view/internal</property>
+		    </not>
+                </and>
+            </condition>
+            <volume>
+                <property>rotors/gear/torque-sound-filtered</property>
+                <factor>0.9</factor>
+            </volume>
+            <pitch>
+                <property>rotors/main/rpm</property>
+                <factor>0.003125</factor>
+                <offset>-0.0</offset>
+                <max>1.03</max>
+            </pitch>
+            <position>
+                <x> -2.5 </x>
+                <y> 0 </y>
+                <z> 0.4 </z>
+            </position>
+            <orientation>
+                <x> 1 </x>
+                <y> 0 </y>
+                <z> .2 </z>
+                <inner-angle>50</inner-angle>
+                <outer-angle>80</outer-angle>
+                <outer-gain>0.2</outer-gain>
+            </orientation>
+            <reference-dist>500</reference-dist>
+            <max-dist>4000</max-dist>
+        </engine>
+		
+		 <rotor>
+            <name>tail_rotor</name>
+            <mode>looped</mode>
+            <path>Aircraft/ec145/Sounds/tailrotor.wav</path>
+            <condition>
+                <and>
+                    <greater-than>
+                        <property>rotors/main/rpm</property>
+                        <value>50</value>
+                    </greater-than>
+                    <not>
+                        <property>sim/crashed</property>
+                    </not>
+			<not>
+			<property>sim/current-view/internal</property>
+			</not>
+                </and>
+            </condition>
+            <volume>
+                <factor>0.8</factor>
+            </volume>
+            <pitch>
+                <property>rotors/tail/rpm</property>
+                <factor>0.0006</factor>
+                <offset>-0.0</offset>
+                <max>2.5</max>
+            </pitch>
+            <position>
+                <x> -2 </x>
+                <y> -0.4 </y>
+                <z> 1.3 </z>
+            </position>
+            <orientation>
+                <x> 1 </x>
+                <y> . </y>
+                <z> 0 </z>
+                <inner-angle>110</inner-angle>
+                <outer-angle>220</outer-angle>
+                <outer-gain>0.1</outer-gain>
+            </orientation>
+            <reference-dist>500</reference-dist>
+            <max-dist>5000</max-dist>
+        </rotor>
+		
+		<!--
+		
+		<rotor>
+			<name>blade-vortex-interaction</name>
+			<mode>looped</mode>
+			 <path>Aircraft/Bell_UH-1H/Sounds/XUH1.wav</path>
+			<condition>
+				<greater-than>
+					<property>sim/sound/vibration</property>
+					<value>0.01</value>
+				</greater-than>
+			</condition>
+			<volume>
+				<property>sim/sound/vibration</property>
+			</volume>
+			<pitch>
+				<property>rotors/main/rpm</property>
+				<factor>0.003262</factor>
+				<offset>0</offset>
+				<min>0</min>
+				<max>1.5</max>
+			</pitch>
+			<reference-dist>1000</reference-dist>
+			<max-dist>3000</max-dist>
+		</rotor>
+		
+		<guns>
+      <name>gunfire</name>
+      <mode>looped</mode>
+      <path>Aircraft/Bell_UH-1H/Sounds/guns_outside.wav</path>
+      <condition> 
+        <property>controls/armament/gun-fire</property>
+        <property>ai/submodels/submodel/count</property>
+        <not>
+          <property>sim/current-view/internal</property>
+        </not>
+      </condition>
+      <volume> 
+        <factor>1.2</factor>
+        <max>1.0</max>
+      </volume>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </guns>  
+	
+	-->
+
+	 <!-- rockets away -->
+    <guns>
+      <name>Rockets1</name>
+      <path>Aircraft/Bell_UH-1H/Sounds/Missile.wav</path>
+      <mode>once</mode>
+      <condition>
+         <property>controls/armament/rocket1-fire</property>
+         <property>ai/submodels/submodel/count</property>
+      </condition>
+    </guns>
+	
+	<guns>
+      <name>Rockets2</name>
+      <path>Aircraft/Bell_UH-1H/Sounds/Missile.wav</path>
+      <mode>once</mode>
+      <condition>
+         <property>controls/armament/rocket2-fire</property>
+         <property>ai/submodels/submodel/count</property>
+      </condition>
+    </guns>
+	
+
+	<rotor>
+			<name>blade-vortex-interaction-G</name>
+			<mode>looped</mode>
+			 <path>Aircraft/Bell_UH-1H/Sounds/XUH2.wav</path>
+			<condition>
+           <and>
+				<greater-than>
+					<property>sim/multiplay/generic/float[15]</property>
+					<value>1.4</value>
+				</greater-than>
+				  <not>
+			<property>sim/current-view/internal</property>
+		    </not>
+				
+			</and>	
+						
+			</condition>
+			<volume>
+				<property>sim/multiplay/generic/float[15]</property>
+				<factor>0.008</factor>
+    	            <offset>0.25</offset>
+	                <min>0.0</min>
+	                <max>1.0</max>
+			</volume>
+			<volume>
+				<property>rotors/main/rpm</property>
+				<factor>0.001</factor>
+    	            <offset>0.25</offset>
+	                <min>0.0</min>
+	                <max>1.0</max>
+			</volume>
+			<pitch>
+				<property>rotors/main/rpm</property>
+				<factor>0.003262</factor>
+				<offset>0</offset>
+				<min>0.</min>
+				<max>1.5</max>
+			</pitch>
+			
+			<max-dist>3000</max-dist>
+		</rotor>	
+		
+		
+			<rotor>
+			<name>blade-vortex-interaction-G-inside</name>
+			<mode>looped</mode>
+			 <path>Aircraft/Bell_UH-1H/Sounds/XUH3.wav</path>
+			<condition>
+           <and>
+				<greater-than>
+					<property>sim/multiplay/generic/float[15]</property>
+					<value>1.4</value>
+				</greater-than>
+				 
+			<property>sim/current-view/internal</property>
+		    
+				
+			</and>	
+						
+			</condition>
+			<volume>
+				<property>accelerations/pilot-g</property>
+				<factor>0.0001</factor>
+    	<offset>0.25</offset>
+	<min>0.0</min>
+	<max>1.0</max>
+			</volume>
+			<pitch>
+				<property>rotors/main/rpm</property>
+				<factor>0.003262</factor>
+				<offset>0</offset>
+				<min>0.</min>
+				<max>1.5</max>
+			</pitch>
+			
+			<max-dist>30</max-dist>
+		</rotor>
+		
+    </fx>
+
+</PropertyList>

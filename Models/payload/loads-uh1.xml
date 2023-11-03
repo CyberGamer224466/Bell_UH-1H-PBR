@@ -1,0 +1,127 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+	
+	
+<animation>
+        <type>range</type>
+        <min-m>0</min-m>
+        <max-m>500</max-m>
+    </animation>
+
+<model>
+		<name>Pylons</name>
+		<path>Aircraft/Bell_UH-1H/Models/payload/pylons.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+			<pitch-deg>0.0</pitch-deg>
+		</offsets>
+	</model>	
+
+
+
+
+
+  <model>
+		<name>csar</name>
+		<path>Aircraft/Bell_UH-1H/Models/payload/sar-uh1.xml</path>
+		<offsets>
+			<x-m> -0 </x-m>
+            <y-m>  0.03387 </y-m>
+            <z-m> -0.1 </z-m>
+			<pitch-deg>0</pitch-deg>
+			<heading-deg>0</heading-deg>
+		</offsets>
+	</model>
+  <animation>
+    <type>select</type>
+    <object-name>csar</object-name>      
+    <condition>
+     
+        <equals>
+          <property>sim/multiplay/generic/string[1]</property>
+          <value>csar</value>
+        </equals>
+       
+    </condition>
+ </animation>
+
+   <model>
+		<name>Military_Transport</name>
+		<path>Aircraft/Bell_UH-1H/Models/payload/miltransport-uh.xml</path>
+		<offsets>
+			<x-m> -0 </x-m>
+            <y-m>  0.03387 </y-m>
+            <z-m> -0.1 </z-m>
+			<pitch-deg>0</pitch-deg>
+			<heading-deg>0</heading-deg>
+		</offsets>
+	</model>
+  <animation>
+    <type>select</type>
+    <object-name>Military_Transport</object-name>      
+    <condition>
+     
+        <equals>
+          <property>sim/multiplay/generic/string[1]</property>
+          <value>Military_Transport</value>
+        </equals>
+       
+    </condition>
+ </animation>
+
+  <model>
+		<name>guns</name>
+		<path>Aircraft/Bell_UH-1H/Models/Divers/guns/guns.xml</path>
+		<offsets>
+			<x-m> -4.162 </x-m>
+            <y-m>  0.000 </y-m>
+            <z-m> -1.490 </z-m>
+			<pitch-deg>0</pitch-deg>
+			<heading-deg>0</heading-deg>
+		</offsets>
+	</model>
+  <animation>
+    <type>select</type>
+    <object-name>guns</object-name>      
+    <condition>
+     
+        <equals>
+          <property>sim/multiplay/generic/string[1]</property>
+          <value>guns</value>
+        </equals>
+       
+    </condition>
+  </animation>	
+
+
+  
+  
+  
+  <animation>
+  <type>select</type>
+  <object-name>pylon.C</object-name>  
+  <condition>
+  <or>
+    <equals>
+    <property>sim/multiplay/generic/string[1]</property>
+    <value>Military_Transport</value>
+   </equals>
+   <equals>
+    <property>sim/multiplay/generic/string[1]</property>
+    <value>csar</value>
+   </equals>
+   <equals>
+    <property>sim/multiplay/generic/string[1]</property>
+    <value>guns</value>
+   </equals>
+  
+   
+   
+  </or>
+  </condition>
+ </animation>
+
+</PropertyList>

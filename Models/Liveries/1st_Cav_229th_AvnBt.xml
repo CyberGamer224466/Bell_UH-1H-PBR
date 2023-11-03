@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <sim>
+    <model>
+      <livery>
+        <name type="string">USArmy, 1Cav, 229AB, B Company</name>
+        <texture>Liveries/1st_Cav_229th_AvnBt.png</texture>
+	
+     
+      </livery>
+    </model>
+	<rendering>
+    <refl_correction type="string">-0.42</refl_correction>
+    </rendering>
+  </sim>
+
+</PropertyList>

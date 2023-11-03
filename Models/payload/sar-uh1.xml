@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+<model>
+<name>pilot1</name>
+<path>Aircraft/Bell_UH-1H/Models/Divers/Pilot/Helipilot4/pilot.xml</path>
+<offsets>
+<x-m> -6.83 </x-m>
+<y-m>  0.48 </y-m>
+<z-m> -0.6 </z-m>
+</offsets>
+</model>
+
+<model>
+<name>pilot2</name>
+<path>Aircraft/Bell_UH-1H/Models/Divers/Pilot/Helipilot4/pilot.xml</path>
+<offsets>
+<x-m> -6.83 </x-m>
+<y-m> -0.57 </y-m>
+<z-m> -0.6 </z-m>
+</offsets>
+</model>
+<!-- Crew seats -->
+
+
+
+<!-- Left seat -->
+<model>
+<path>Aircraft/Bell_UH-1H/Models/Divers/Seats/seat.xml</path>
+<offsets>
+<x-m> -4.2 </x-m>
+<y-m>  0.71496 </y-m>
+<z-m> -1.2</z-m>
+</offsets>
+</model>
+
+<!-- Right seat -->
+<model>
+<path>Aircraft/Bell_UH-1H/Models/Divers/Seats/seat.xml</path>
+<offsets>
+<x-m> -4.2 </x-m>
+<y-m> -0.71496 </y-m>
+<z-m> -1.2</z-m>
+</offsets>
+</model>
+
+
+<!-- defib -->
+<model>
+<path>Aircraft/Bell_UH-1H/Models/Divers/hems/defib.xml</path>
+<offsets>
+<x-m> -5.24 </x-m>
+<y-m>  -0.03387 </y-m>
+<z-m> -0.25 </z-m>
+<heading-deg>180</heading-deg>
+</offsets>
+</model>
+
+<!-- cuff -->
+<model>
+<path>Aircraft/Bell_UH-1H/Models/Divers/hems/cuff.xml</path>
+<offsets>
+<x-m> -5.2 </x-m>
+<y-m>  -0.45 </y-m>
+<z-m> -0.45 </z-m>
+<heading-deg>180</heading-deg>
+</offsets>
+</model>
+
+<!-- mask -->
+<model>
+<path>Aircraft/Bell_UH-1H/Models/Divers/hems/mask.xml</path>
+<offsets>
+<x-m> -5.28 </x-m>
+<y-m>  0.28 </y-m>
+<z-m> -0.45 </z-m>
+<heading-deg>90</heading-deg>
+</offsets>
+</model>
+
+<!-- Bed -->
+<model>
+<path>Aircraft/Bell_UH-1H/Models/Divers/hems/bed.xml</path>
+<offsets>
+<x-m> -5.3 </x-m>
+<y-m>  0.03387 </y-m>
+<z-m> 0.05 </z-m>
+</offsets>
+</model>
+
+<!-- Box -->
+<model>
+<path>Aircraft/Bell_UH-1H/Models/Divers/hems/box.xml</path>
+<offsets>
+<x-m> -6.15</x-m>
+<y-m>  -0.55 </y-m>
+<z-m> -1.2 </z-m>
+<heading-deg>90</heading-deg>
+</offsets>
+</model>
+
+
+<!-- paramedic pack -->
+<model>
+<path>Aircraft/Bell_UH-1H/Models/Divers/hems/medipack.xml</path>
+<offsets>
+<x-m> -6.3</x-m>
+<y-m>  0.55 </y-m>
+<z-m> -1.2 </z-m>
+<heading-deg>180</heading-deg>
+</offsets>
+</model>
+
+<!-- Search Light -->
+<model>
+<path>Aircraft/Bell_UH-1H/Models/Divers/SearchLight/searchlight.xml</path>
+<offsets>
+<x-m> -6.89656 </x-m>
+<y-m>  0.29294 </y-m>
+<z-m> -1.434 </z-m>
+</offsets>
+</model>
+
+<!-- winch -->
+<model>
+<path>Aircraft/Bell_UH-1H/Models/Divers/winch/winch.xml</path>
+<offsets>
+<x-m> -4.89656 </x-m>
+<y-m>  0.2 </y-m>
+<z-m> -1.13 </z-m>
+</offsets>
+</model>
+
+<!-- M60-cal -->
+<model>
+<path>Aircraft/Bell_UH-1H/Models/payload/doorguns/m60.xml</path>
+<offsets>
+<x-m>0</x-m>
+<y-m>-0.11</y-m>
+<z-m>-0.32</z-m>
+<pitch-deg>5</pitch-deg>
+</offsets>
+</model>
+
+</PropertyList>

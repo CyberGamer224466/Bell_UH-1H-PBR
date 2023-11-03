@@ -1,0 +1,803 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+	<sim>
+		<description>Bell UH-1H "Huey"</description>
+		<author>BARANGER Emmanuel (3D), Heiko Schulz (3D), Simon Lister (3D), Maik Justus (sound) StuartC (FDM), Sanni ( Cockpit bits ) Garry Brown ( paint )</author>
+		<status>1.1b</status>
+		<license>GPL v2</license>
+
+		<flight-model>yasim</flight-model>
+		<aero>uh1-yasim</aero>
+		<fuel-fraction>1.0</fuel-fraction>
+		
+		<rating>
+<FDM type="int">     4 </FDM>
+<systems type="int"> 3 </systems>
+<cockpit type="int"> 3 </cockpit>
+<model type="int">   4 </model>
+</rating>
+
+ <tags>
+      <tag>Bell UH-1</tag>
+      <tag>helicopter</tag>
+      <tag>Single engine</tag>
+      <tag>Bell Helicopter</tag>
+	  <tag>Agusta Bell</tag>
+      <tag>Huey</tag>
+      <tag>Utility Helicopter</tag>
+	  <tag>FGUK</tag>
+	  <tag>Rotary Wing</tag>
+      <tag>1960s</tag>
+	   <tag>1970s</tag>
+	    <tag>1980s</tag>
+		 <tag>1990s</tag>
+      <tag>2000s</tag>
+    </tags>
+
+
+		<sound>
+			<path>Aircraft/Bell_UH-1H/Sounds/sound.xml</path>
+		</sound>
+		
+			<submodels>
+<serviceable type="bool">true</serviceable>
+<path>Aircraft/Bell_UH-1H/Models/Effects/guns/UH-1submodels.xml</path>
+ <path>Aircraft/Bell_UH-1H/Models/payload/loads-uh1.xml</path>
+</submodels>
+
+<panel>
+			<visibility archive="n">false</visibility>
+		</panel>
+		
+		  <systems>
+      <electrical>
+        <path>Aircraft/Bell_UH-1H/Systems/fgukelectrical.xml</path>
+      </electrical>
+	   <autopilot n="101">
+                <path>Aircraft/Bell_UH-1H/Systems/glass-rain.xml</path>
+            </autopilot>
+			 <autopilot n="102">
+                <path>Aircraft/Bell_UH-1H/Systems/sound-rules.xml</path>
+            </autopilot>
+            <!--<autopilot>
+        <path>Aircraft/Bell_UH-1H/Systems/autopilot.xml</path>
+      </autopilot>-->
+    </systems> 
+	
+
+		
+		<flight-recorder include="Systems/flight-recorder.xml"/>
+		
+
+		<model>
+			<path archive="y">Aircraft/Bell_UH-1H/Models/UH1-H.xml</path>
+			   <rescue-lift>0.01</rescue-lift>
+                <rescue type="bool">false</rescue>
+					<config>
+		
+				</config>
+				
+				
+		<bo105>
+				
+				<tail-angle-deg type="int" archive="y">0</tail-angle-deg>
+				<state type="int">0</state>
+				<rotor-step-deg type="float">-1.0</rotor-step-deg>
+
+				<particles>
+					<enabled type="bool">true</enabled>
+				</particles>
+<headsetholder>
+                 <position-deg type="float">90.0</position-deg>
+               </headsetholder>
+			<doors>
+					<door>
+						<position-norm type="double">0.0</position-norm>
+						<name type="string">pilot's door</name>
+					</door>
+
+					<door>
+						<position-norm type="double">0.0</position-norm>
+						<name type="string">copilot's door</name>
+					</door>
+
+					<door>
+						<position-norm type="double">0.0</position-norm>
+						<name type="string">right backdoor</name>
+					</door>
+
+					<door>
+						<position-norm type="double">0.0</position-norm>
+						<name type="string">left backdoor</name>
+					</door>
+
+					<door>
+						<position-norm type="double">0.0</position-norm>
+						<name type="string">right reardoor</name>
+					</door>
+
+					<door>
+						<position-norm type="double">0.0</position-norm>
+						<name type="string">left reardoor</name>
+					</door>
+				</doors>
+			</bo105>
+			
+
+
+			<livery>
+				<file type="string"/>
+			</livery>
+		</model>
+		
+		<rendering>
+    <refl_correction type="string">-0.42</refl_correction>
+    </rendering>
+
+		<multiplay>
+			<generic>
+			    <!-- Nav lights on -->
+      <int n="0" alias="/controls/switches/nav-lights-switch" />
+      <!-- Beacon on -->
+      <int n="1" alias="/controls/switches/beacon-switch" />
+      <!-- Landing lights on -->
+      <int n="2" alias="/controls/switches/landing-lights-switch" />
+	    <!-- Taxi light on -->
+      <int n="3" alias="/controls/switches/strobe-switch" />
+	  <int n="6" alias="/gear/gear/ground-is-solid"/><!-- rotor particles -->
+      <!-- Crashed -->
+      <int n="7" alias="/sim/crashed" />
+		 <!-- search light on -->
+      <int n="8" alias="/controls/switches/search-lights-switch" />	
+		
+	            <float n="0" alias="/sim/model/bo105/doors/door[0]/position-norm"/>
+				<float n="1" alias="/sim/model/bo105/doors/door[1]/position-norm"/>
+				<float n="2" alias="/sim/model/bo105/doors/door[2]/position-norm"/>
+				<float n="3" alias="/sim/model/bo105/doors/door[3]/position-norm"/>
+				<float n="4" alias="/sim/model/bo105/doors/door[4]/position-norm"/>
+				<float n="5" alias="/sim/model/bo105/doors/door[5]/position-norm"/>
+				<float n="6" alias="/orientation/pitch-deg"/>	<!-- rotor particles -->
+				<float n="7" alias="/position/gear-agl-m"/>	<!-- rotor particles -->
+				<float n="8" alias="/orientation/roll-deg"/><!-- rotor particles -->
+				<float n="9" alias="/rotors/main/torque"/>	<!-- rotor particles -->
+				<float n="10" alias="/sim/model/turret-positions/turretx"/><!--Searchlight over MP -->
+				<float n="11" alias="/sim/model/turret-positions/turretz"/><!--searchlight over MP -->
+				<float n="12" alias="/sim/model/rescue"/><!--winchman over MP -->
+				<float n="13" alias="/sim/model/rescue-lift"/><!--winchman over MP -->
+		        <float n="15" alias="/accelerations/pilot-gdamped"/><!--Pilot G over MP -->
+                <string alias="/sim/weight[5]/selected" n="1"/> <!-- Payload over multiplayer -->
+				
+				
+			</generic>
+		</multiplay>
+		
+			<rendering>
+			<camera-group>
+				<znear type="double">0.1</znear>
+			</camera-group>
+		</rendering>
+
+  
+  <view n="0">
+     <internal archive="y">true</internal>
+     <name>Pilot View</name>
+    <config>
+      <x-offset-m archive="y">  0.51 </x-offset-m> <!--right-->
+      <y-offset-m archive="y"> -0.19 </y-offset-m> <!--up-->
+      <z-offset-m archive="y"> -6.6 </z-offset-m> <!--back-->
+      <pitch-offset-deg> -20 </pitch-offset-deg>
+      <default-field-of-view-deg> 110 </default-field-of-view-deg>
+    </config>
+  </view>
+  
+    <view n="100">
+    <name>Co pilot</name>
+    <internal archive="y">true</internal>
+    <type>lookfrom</type>
+    <config>
+      <from-model type="bool">true</from-model>
+      <dynamic-view type="bool">true</dynamic-view>
+      <ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
+      <x-offset-m archive="y"> -0.51 </x-offset-m> <!--right-->
+      <y-offset-m archive="y"> -0.19 </y-offset-m> <!--up-->
+      <z-offset-m archive="y"> -6.64 </z-offset-m> <!--back-->
+      <pitch-offset-deg> -20 </pitch-offset-deg>
+      <default-field-of-view-deg> 97.5 </default-field-of-view-deg>
+    </config>
+  </view>
+  
+  <view n="101">
+    <name>Crew Chief</name>
+    <internal archive="y">false</internal>
+    <type>lookfrom</type>
+    <config>
+      <from-model type="bool">true</from-model>
+      <from-model-idx type="int">0</from-model-idx>
+      <ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
+      <x-offset-m archive="y"> -0.61 </x-offset-m> <!--right-->
+      <y-offset-m archive="y"> -0.11 </y-offset-m> <!--up-->
+      <z-offset-m archive="y"> -5.7 </z-offset-m> <!--back-->
+      <pitch-offset-deg> -20 </pitch-offset-deg>
+      <default-field-of-view-deg> 97.5 </default-field-of-view-deg>
+	   <heading-offset-deg>300</heading-offset-deg>
+    </config>
+  </view>
+  
+  <view n="102">
+    <name>Crew Chief2</name>
+    <internal archive="y">false</internal>
+    <type>lookfrom</type>
+    <config>
+       <from-model type="bool">true</from-model>
+      <from-model-idx type="int">0</from-model-idx>
+      <ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
+      <x-offset-m archive="y"> 0.61 </x-offset-m> <!--right-->
+      <y-offset-m archive="y"> -0.11 </y-offset-m> <!--up-->
+      <z-offset-m archive="y"> -4.7 </z-offset-m> <!--back-->
+      <pitch-offset-deg> -20 </pitch-offset-deg>
+      <default-field-of-view-deg> 97.5 </default-field-of-view-deg>
+	   <heading-offset-deg>340</heading-offset-deg>
+    </config>
+  </view>
+  
+  <view n="103">
+    <name>Tail Camera View</name>
+    <type>lookfrom</type>
+    <internal archive="y">false</internal>
+    <config>
+      <from-model type="bool">true</from-model>
+      <from-model-idx type="int">0</from-model-idx>
+      <ground-level-nearplane-m type="double">0.01f</ground-level-nearplane-m>
+      <x-offset-m archive="y"> 0.000 </x-offset-m> <!--Right-->
+      <y-offset-m archive="y"> 1.700 </y-offset-m> <!--Up-->
+      <z-offset-m archive="y"> 4.118 </z-offset-m> <!--Back-->
+      <pitch-offset-deg> -5 </pitch-offset-deg>
+      <default-field-of-view-deg type="double"> 30 </default-field-of-view-deg>
+    </config>
+  </view>
+  
+   <view n="104">
+    <name>Cockpit cam</name>
+     <internal archive="y">false</internal>
+    <type>lookfrom</type>
+    <config>
+      <from-model type="bool">true</from-model>
+      <from-model-idx type="int">0</from-model-idx>
+      <ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
+      <x-offset-m archive="y">0</x-offset-m> <!--right-->
+      <y-offset-m archive="y"> -0.11 </y-offset-m> <!--up-->
+      <z-offset-m archive="y"> -5.7 </z-offset-m> <!--back-->
+      <pitch-offset-deg> -10 </pitch-offset-deg>
+      <default-field-of-view-deg> 97.5 </default-field-of-view-deg>
+	   <heading-offset-deg>0</heading-offset-deg>
+    </config>
+  </view>
+  
+   <view n="105">
+    <name>Pilot cam</name>
+    <internal archive="y">false</internal>
+    <type>lookfrom</type>
+    <config>
+       <from-model type="bool">true</from-model>
+      <from-model-idx type="int">0</from-model-idx>
+      <ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
+      <x-offset-m archive="y">0</x-offset-m> <!--right-->
+      <y-offset-m archive="y"> -0.11 </y-offset-m> <!--up-->
+      <z-offset-m archive="y"> -7 </z-offset-m> <!--back-->
+      <pitch-offset-deg> -10 </pitch-offset-deg>
+      <default-field-of-view-deg> 97.5 </default-field-of-view-deg>
+	   <heading-offset-deg>200</heading-offset-deg>
+    </config>
+  </view>
+  
+   <view n="1">
+    <config>
+      <target-z-offset-m archive="y" type="double"> 0 </target-z-offset-m>
+    </config>
+  </view>
+  
+  <view n="2">
+    <config>
+      <target-z-offset-m archive="y" type="double"> 0 </target-z-offset-m>
+    </config>
+  </view>
+  
+  <view n="3">
+    <config>
+      <target-z-offset-m archive="y" type="double"> 0 </target-z-offset-m>
+    </config>
+  </view>
+  
+  <view n="4">
+    <config>
+      <target-z-offset-m archive="y" type="double"> 0 </target-z-offset-m>
+    </config>
+  </view>
+  
+  <view n="5">
+    <config>
+      <target-z-offset-m archive="y" type="double"> 0 </target-z-offset-m>
+    </config>
+  </view>
+  
+  <view n="6">
+    <config>
+      <target-z-offset-m archive="y" type="double"> 0 </target-z-offset-m>
+    </config>
+  </view>
+  
+  <hud>
+			<enable3d>false</enable3d>
+		</hud>
+
+<weight n="0">
+<name>Pilot</name>
+<weight-lb>180</weight-lb>
+<max-lb>300</max-lb>
+</weight>
+<weight n="1">
+<name>Co-Pilot</name>
+<weight-lb>180</weight-lb>
+<max-lb>300</max-lb>
+</weight>
+<weight n="2">
+<name>Right Crew Chief</name>
+<weight-lb>0</weight-lb>
+<max-lb>300</max-lb>
+</weight>
+<weight n="3">
+<name>Passengers</name>
+<weight-lb>0</weight-lb>
+<max-lb>300</max-lb>
+</weight>
+<weight n="4">
+<name>Left Crew Chief</name>
+<weight-lb>0</weight-lb>
+<max-lb>300</max-lb>
+</weight>
+<weight n="5">
+<name>Configuration</name>
+<weight-lb>0</weight-lb>
+<selected>none</selected>
+<opt>
+<name>none</name>
+<lbs>0</lbs>
+</opt>
+
+
+
+<opt>
+<name>csar</name>
+<lbs>350</lbs>
+</opt>
+
+<opt>
+<name>Military_Transport</name>
+<lbs>650</lbs>
+</opt>
+
+<opt>
+<name>guns</name>
+<lbs>1000</lbs>
+</opt>
+
+</weight>	
+
+<help include="Systems/help.xml"/>
+
+<menubar include="Dialogs/uh1-menu.xml"/>	
+  
+ 
+	</sim>
+	
+	
+		<environment>
+    <turbulence>
+      <use-cloud-turbulence>true</use-cloud-turbulence>
+    </turbulence>
+  </environment>
+
+	
+	<consumables>
+		<fuel>
+			<tank>
+				<name>Main</name>
+				<selected type="bool" write="n">1</selected>
+				<density-ppg type="double" write="n">6.682</density-ppg>
+			</tank>
+
+			<tank>
+				<name>Supply</name>
+				<selected type="bool" write="n">1</selected>
+				<density-ppg type="double" write="n">6.682</density-ppg>
+			</tank>
+		</fuel>
+	</consumables>
+
+<controls>
+		<rotor>
+			<reltarget type="double">0</reltarget>
+			<maxreltorque type="double">0</maxreltorque>
+			 <brake type="bool">1</brake>
+		</rotor>
+
+	
+
+		<engines>
+			<engine n="0">
+				<magnetos>1</magnetos>
+				<propeller-pitch alias="/controls/engines/power-trim"/>
+				<mixture alias="/controls/engines/power-balance"/>
+				<cutoff type="bool">true</cutoff>
+				<starter type="bool">true</starter>
+			</engine>
+			<engine n="1">
+				<magnetos>1</magnetos>
+				<propeller-pitch alias="/controls/engines/power-trim"/>
+				<mixture alias="/controls/engines/power-balance"/>
+				<throttle alias="/controls/engines/engine[0]/throttle"/>
+				<cutoff type="bool">true</cutoff>
+				<starter type="bool">true</starter>
+			</engine>
+			<power-trim type="double">0</power-trim>
+			<power-balance type="double">0</power-balance>
+	</engines>
+		
+		<engines>
+		<engine>
+         <fuel-pump type="bool">false</fuel-pump>
+		   <masterkey type="bool">false</masterkey>
+		 </engine>
+		</engines>
+		
+		
+<hydraulic>
+<system>	
+<electric-pump type="bool">false</electric-pump>
+</system>
+</hydraulic>
+
+		
+		
+<electric>
+<battery-switch type="bool">false</battery-switch>
+<APU-generator type="bool">false</APU-generator>
+ <directbat-switch type="bool">false</directbat-switch>
+<engine>
+<bus-tie type="bool">false</bus-tie>
+ <generator type="bool">false</generator>
+</engine>
+</electric>
+		
+	
+	<switches>
+	<invtr type="bool">false</invtr>
+	<fuel>
+      
+        <transfer-pump n="1" type="bool">false</transfer-pump>
+          <left-boost-pump n="1" type="bool">false</left-boost-pump>
+		  <right-boost-pump n="1" type="bool">false</right-boost-pump>
+    </fuel>
+	
+	<landing-lights-switch type="bool">false</landing-lights-switch>
+	<search-lights-switch type="bool">false</search-lights-switch>
+	<nav-lights-switch type="bool">false</nav-lights-switch>
+	<beacon-switch type="bool">false</beacon-switch>
+	<strobe-switch type="bool">false</strobe-switch>
+	<white-light-switch type="bool">false</white-light-switch>
+	<main_gen type="bool">false</main_gen>
+	<startergen type="bool">false</startergen>
+	<main_avionics type="bool">false</main_avionics>
+	<lowrpmaudio type="bool">false</lowrpmaudio>
+	</switches>
+	
+<anti-ice>
+	<pitot-heat type="bool">false</pitot-heat>
+ </anti-ice>  
+ 
+  <wiper>
+    <pos type="int">0</pos>
+    <poscp type="int">0</poscp>
+    <posp type="int">0</posp>
+    <speed type="int">0</speed>
+    <side type="int">0</side>
+  </wiper>
+   
+	</controls>
+
+<instrumentation>
+		<gsdi>
+			<serviceable type="bool">true</serviceable>
+		</gsdi>
+		<cdu>  <serviceable type="bool">true</serviceable>
+<enabled type="bool">true</enabled></cdu>
+		<hsi>
+			<serviceable type="bool" archive="y">true</serviceable>
+		</hsi>
+	</instrumentation>
+
+
+	<input>
+		<keyboard>
+		
+		
+		
+
+			<key n="105">
+				<name>i</name>
+				<desc>Toggle ignition switch</desc>
+				<binding>
+					<command>nasal</command>
+					<script>
+						foreach (var e; controls.engines) {
+							if (e.selected.getValue()) {
+								var i = e.controls.getNode("ignition", 1);
+								i.setValue(!i.getValue());
+							}
+						}
+					</script>
+				</binding>
+			</key>
+
+			<key n="114">
+                                <name>r</name>
+                                <desc>Toggle Rescue</desc>
+                                <binding>
+                                        <command>property-toggle</command>
+                                        <property>sim/multiplay/generic/float[12]</property>
+                                </binding>
+                        </key>
+                        <key n="109">
+                                <name>m</name>
+                                <desc>Lift Winch</desc>
+                                <repeatable type="bool">true</repeatable>
+                                <binding>
+                                        <command>property-adjust</command>
+                                        <property>sim/model/rescue-lift</property>
+                                        <step type="double">-0.01</step>
+                                        <min>0.0</min>
+                                        <max>1</max>
+                                </binding>
+                        </key>
+                        <key n="77">
+                                <name>M</name>
+                                <desc>Down Winch</desc>
+                                <repeatable type="bool">true</repeatable>
+                                <binding>
+                                        <command>property-adjust</command>
+                                        <property>sim/model/rescue-lift</property>
+                                        <step type="double">0.01</step>
+                                        <min>0.0</min>
+                                        <max>1</max>
+                                </binding>
+                        </key>
+
+			<key n="118">
+				<name>Alt-v</name>
+				<desc>Toggle dynamic cockpit view</desc>
+				<mod-alt>
+					<binding>
+						<command>property-toggle</command>
+						<property>/sim/view/dynamic/enabled</property>
+					</binding>
+				</mod-alt>
+			</key>
+
+			
+
+			<key n="123">
+				<name>{</name>
+				<desc>Shutdown Engines</desc>
+				<binding>
+					<command>nasal</command>
+					<script>bo105.shutdown()</script>
+					<condition>
+						<property>/sim/signals/fdm-initialized</property>
+					</condition>
+				</binding>
+			</key>
+
+			<key n="125">
+				<name>}</name>
+				<desc>Start Engines</desc>
+				<binding>
+					<command>nasal</command>
+					<script>bo105.startup()</script>
+					<condition>
+						<property>/sim/signals/fdm-initialized</property>
+					</condition>
+				</binding>
+			</key>
+			
+				<key n="97">
+<name>a</name>
+<desc>Rotate Spotlight left</desc>
+<repeatable>true</repeatable>
+<interval-sec>0.001</interval-sec>
+<binding>
+ <command>property-adjust</command>
+<property>sim/multiplay/generic/float[10]</property>
+ <step>1</step>
+
+ <max>110</max>
+</binding>
+</key>
+
+<key n="100">
+<name>d</name>
+<desc>Rotate Spotlight right</desc>
+<repeatable>true</repeatable>
+<interval-sec>0.001</interval-sec>
+<binding>
+ <command>property-adjust</command>
+<property>sim/multiplay/generic/float[10]</property>
+ <step>-1</step>
+
+<max>110</max>
+</binding>
+</key>
+
+<key n="119">
+<name>w</name>
+<desc>Rotate Spotlight up</desc>
+<repeatable>true</repeatable>
+<interval-sec>0.001</interval-sec>
+<binding>
+ <command>property-adjust</command>
+<property>sim/multiplay/generic/float[11]</property>
+ <step>-1</step>
+
+ <max>0</max>
+</binding>
+</key>
+
+<key n="115">
+<name>s</name>
+<desc>Rotate Spotlight down</desc>
+<repeatable>true</repeatable>
+<interval-sec>0.001</interval-sec>
+<binding>
+ <command>property-adjust</command>
+ <property>sim/multiplay/generic/float[11]</property>
+ <step>1</step>
+
+ <max>0</max>
+</binding>
+</key>
+
+
+ <!-- gun trigger key, codes -->  
+  <key n="127">
+    <name>Delete </name>
+    <desc>Gun Trigger</desc> 
+    <binding>
+      <command>property-assign</command>
+      <property>controls/armament/trigger</property>
+      <value>true</value>
+    </binding>
+    <mod-up>
+      <binding>
+        <command>property-assign</command>
+        <property>controls/armament/trigger</property>
+        <value>false</value>
+      </binding> 
+    </mod-up>
+  </key>
+  <!-- end of gun trigger key, codes -->
+  
+  <!-- port side rocket trigger key, codes -->  
+  <key n="91">
+    <name>[</name>
+    <desc>portside rocket Trigger</desc> 
+    <binding>
+      <command>property-assign</command>
+      <property>controls/armament/trigger1</property>
+      <value>true</value>
+    </binding>
+    <mod-up>
+      <binding>
+        <command>property-assign</command>
+        <property>controls/armament/trigger1</property>
+        <value>false</value>
+      </binding> 
+    </mod-up>
+  </key> 
+  <!-- end of port side rocket trigger key, codes -->
+  
+  <!-- starboard side rocket trigger key, codes -->  
+  <key n="93">
+    <name>]</name>
+    <desc>starboard rocket Trigger</desc> 
+    <binding>
+      <command>property-assign</command>
+      <property>controls/armament/trigger2</property>
+      <value>true</value>
+    </binding>
+    <mod-up>
+      <binding>
+        <command>property-assign</command>
+        <property>controls/armament/trigger2</property>
+        <value>false</value>
+      </binding> 
+    </mod-up>
+  </key>
+
+
+		</keyboard>
+	</input>
+
+	<nasal>
+	  <rotorwash>
+	<file>Aircraft/Bell_UH-1H/Nasal/rotorwash.nas</file>
+	</rotorwash>
+	
+	
+	<VHF22>
+<file>Aircraft/Bell_UH-1H/Nasal/ctl22.nas</file>
+</VHF22>
+<VIR32>
+<file>Aircraft/Bell_UH-1H/Nasal/ctl32.nas</file>
+</VIR32>
+<ADF462>
+<file>Aircraft/Generic/DualControl/Instruments/ADF-462/ctl62.nas</file>
+</ADF462>
+<chronograph>
+<file>Aircraft/Bell_UH-1H/Nasal/chronograph.nas</file>
+</chronograph>
+	
+	 <bell205>
+     <!-- <file>Aircraft/bell205/Nasal/Electrical.nas</file>-->
+      
+      <file>Aircraft/Bell_UH-1H/Nasal/wiper.nas</file>
+     
+    </bell205>
+	
+	
+	<bo105>
+			 <file>Aircraft/Bell_UH-1H/Nasal/bo105.nas</file>
+			<file>Aircraft/Bell_UH-1H/Nasal/engines.nas</file>
+			 <file>Aircraft/Bell_UH-1H/Nasal/liveries.nas</file>
+			
+			  <file>Aircraft/Bell_UH-1H/Nasal/woolthread.nas</file>
+			   
+		</bo105>
+		
+		
+		<guns>
+<file>Aircraft/Bell_UH-1H/Nasal/guns.nas</file>
+</guns>
+	
+	<doors>
+<file>Aircraft/Bell_UH-1H/Nasal/doors.nas</file> <!-- only used to move the gunsight -->
+</doors>
+		
+		<lights>
+      <file>Aircraft/Bell_UH-1H/Nasal/Lights.nas</file>
+    </lights>
+	
+        
+   
+
+	<sound-helper>
+      <file>Aircraft/Bell_UH-1H/Nasal/sound-helper.nas</file>
+    </sound-helper> 
+	
+	 <dual_control_tools>
+   <file>Aircraft/Generic/DualControl/dual-control-tools.nas</file>
+  </dual_control_tools>
+  <aircraft_dual_control>
+   <file>Aircraft/Bell_UH-1H/Nasal/uh1-dual-control.nas</file>
+  </aircraft_dual_control>
+  <dual_control>
+   <file>Aircraft/Generic/DualControl/copilot-dual-control.nas</file>
+  </dual_control>
+	
+	</nasal>
+
+	<rotors>
+		<main>
+			<rpm type="double">0</rpm>
+		</main>
+	</rotors>
+</PropertyList>

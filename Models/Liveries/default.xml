@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <sim>
+    
+    <model>
+      <livery>
+        <name type="string">Default (Tigre)</name>
+        <texture>texture.png</texture>
+       
+      </livery>
+        </model>
+    <rendering>
+    <refl_correction type="string">-0.42</refl_correction>
+    </rendering>
+  </sim>
+
+</PropertyList>
