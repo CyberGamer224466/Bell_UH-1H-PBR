@@ -452,7 +452,7 @@ if(navStillOn) {
        <object-name>sidedoorglasright</object-name>
        <object-name>slidedoorglasleft</object-name>
        <object-name>slidedoorglasright</object-name>
-     <object-name><object-name>lowerglass</object-name></object-name>
+       <object-name>lowerglass</object-name>
      
 </effect>
 
